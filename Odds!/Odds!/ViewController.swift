@@ -15,6 +15,10 @@ class ViewController: UIViewController {
     @IBAction func tipSliderChanged(sender: UISlider) {
         
         self.percentLabel.text = "\(Int(sender.value))"
+        
+        let percentText = self.percentLabel.text
+        
+        print (percentText)
     }
     
     override func viewDidLoad() {
@@ -27,6 +31,21 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func FlipButton(sender: AnyObject) {
+        
+        print ("Flip button pressed")
+        
+        let randomValue = arc4random_uniform(100)
+        
+        //var winCounter = 0
+        
+        //print (randomValue)
+        
+        //if (randomValue < self.percentLabel.text){
+        //winCounter = winCounter+1
+        }
+    
+    }
 
-}
+
 
