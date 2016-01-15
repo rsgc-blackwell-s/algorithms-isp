@@ -12,13 +12,21 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var percentLabel: UILabel!
     
+    @IBOutlet weak var streakNumber: UILabel!
+        
+    @IBOutlet weak var scoreNumber: UILabel!
+    
+    var percent: Int = 50
+    var streakCounter = 0
+    var buttonPressCount = 0
+    var scoreCounter = 0
+    
     @IBAction func tipSliderChanged(sender: UISlider) {
         
         self.percentLabel.text = "\(Int(sender.value))"
         
-        let percentText = self.percentLabel.text
+        percent = Int(self.percentLabel.text!)!
         
-        print (percentText)
     }
     
     override func viewDidLoad() {
@@ -33,18 +41,36 @@ class ViewController: UIViewController {
 
     @IBAction func FlipButton(sender: AnyObject) {
         
+        // Set initial streak value
+        self.streakNumber.text = String(streakCounter)
+        
+        // Set initial score value
+        self.scoreNumber.text = String(scoreCounter)
+        
+        ++buttonPressCount
+        
         print ("Flip button pressed")
         
-        let randomValue = arc4random_uniform(100)
+        let randomValue = Int(arc4random_uniform(100))
         
-        //var winCounter = 0
+        print ("randomValue", randomValue)
         
-        //print (randomValue)
+        print ("percent", percent)
         
-        //if (randomValue < self.percentLabel.text){
-        //winCounter = winCounter+1
+        print ("winCounter", streakCounter)
+        
+        if (randomValue < percent) {
+            streakCounter = streakCounter + 1
+            
+            scoreCounter = scoreCounter + ((100-percent)*2)
+        }
+        if (randomValue > percent) {
+            streakCounter = 0
+            
+            scoreCounter = 0
         }
     
+    }
     }
 
 
