@@ -96,6 +96,7 @@
 				TargetAttributes = {
 					3F3CA93D1C454CCC00A16BE6 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = UMMPDFZYGK;
 					};
 				};
 			};
@@ -288,6 +289,7 @@
 				3F3CA9521C454CCC00A16BE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
