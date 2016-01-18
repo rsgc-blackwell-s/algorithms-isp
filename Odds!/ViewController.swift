@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    //creating (outlet for) label to display the percent chosen by the use
+    //creating (outlet for) label to display the percent chosen by the user
     @IBOutlet weak var percentLabel: UILabel!
     
     //creating (outlet for) label to display the user's streak
@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     //creating (outlet for) label to display the user's score
     @IBOutlet weak var scoreNumber: UILabel!
     
-    //creating (outlet for) label to display result of 'flip'
+    //creating (outlet for) label to display result of 'coin flip'
     @IBOutlet weak var headsOrTails: UILabel!
     
     //creating variable to control 'percentLabel' outlet
@@ -50,13 +50,13 @@ class ViewController: UIViewController {
     }
     
     
-    // Do any additional setup after loading the view, typically from a nib.
+    // do any additional setup after loading the view, typically from a nib.
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     
-    // Dispose of any resources that can be recreated.
+    // dispose of any resources that can be recreated.
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -71,10 +71,10 @@ class ViewController: UIViewController {
         //print count (not viewable by user)
         print ("buttonPressCount", buttonPressCount)
         
-        //tells writer everytime button is pressed
+        //tells writer every time button is pressed
         print ("Flip button pressed")
         
-        //creates random value (between 1 and 100) everytime 'Flip!' button is pressed
+        //creates random value (between 1 and 100) every time 'Flip!' button is pressed
         let randomValue = Int(arc4random_uniform(100))
         
         //prints randomValue (not viewable by user)
