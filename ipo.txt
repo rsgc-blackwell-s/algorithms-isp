@@ -1,0 +1,19 @@
+ALGORITHM, Odds!
+
+Summary:
+A simple iPhone game that requires little to no skill on the user’s end. The game would use simple code that I have already learned from the TipCalculator tutorial from earlier in the course.
+
+Idea: A game that uses the concepts of a markov-chain/bot to create an ‘odds’ type game. This game would simulate the idea of ‘flipping a coin’, with the user choosing the odds of the coin landing on a pre-determined side. The lower the chosen odds, the more points they will gain.
+
+Algorithm: 
+ - @IBOutlet(s)
+   - labels/counters
+ - Variables (var or let)
+   - percent
+   - score
+ - @IBAction(s)
+   - slider (maybe textbox…)
+   - button (pressed when user wants to check results)
+     - random value determined to decide what side coin ‘lands’ on
+     - ‘if’ statement (one for each outcome) determines result and displays it to user
+     - score reset if coin flips to ‘bad’ side

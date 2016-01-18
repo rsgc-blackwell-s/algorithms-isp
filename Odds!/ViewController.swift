@@ -124,7 +124,4 @@ class ViewController: UIViewController {
     }
 }
 
-//Why the app is delayed in its results...
-//I think it may be because when and 'if' statement is taken into consideration, it changes a variable that was described earlier in the code... So the application only retrieves that new number the NEXT time the button is pressed.
-
 
