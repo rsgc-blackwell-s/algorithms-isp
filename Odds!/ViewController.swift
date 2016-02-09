@@ -22,6 +22,10 @@ class ViewController: UIViewController {
     //creating (outlet for) label to display result of 'coin flip'
     @IBOutlet weak var headsOrTails: UILabel!
     
+    //creating (outlet for) label to display user's 'best' score
+    //@IBOutlet weak var bestScore: UILabel!
+    
+    
     //creating variable to control 'percentLabel' outlet
     //variable starts at 50(%) automatically
     var percent: Int = 50
@@ -37,6 +41,9 @@ class ViewController: UIViewController {
     
     //creating variable to control 'headsOrTails' outlet
     var headsOrTailsVar = String("?")
+    
+    //creating variable to control 'bestScore' outlet
+    //var bestScoreVar = String(0)
     
     
     //controls actions that occur when slider is in use
@@ -120,6 +127,9 @@ class ViewController: UIViewController {
         
         //set initial 'flip' result (display on storyboard)
         self.headsOrTails.text = String(headsOrTailsVar)
+        
+        //set initial 'best' score value (display on stroyboard)
+        //self.bestScore.text = String(bestScoreVar)
         
     }
 }
